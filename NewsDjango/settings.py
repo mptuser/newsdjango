@@ -67,7 +67,7 @@ DEBUG = True
 
 WSGI_APPLICATION = 'NewsDjango.wsgi.application'
 
-ALLOWED_HOSTS = ['127.0.0.1', '89.223.123.167']
+ALLOWED_HOSTS = ['127.0.0.1', '']
 
 DATABASES = {
     'default': {
