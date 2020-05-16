@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<h1 class="mb-5">Статьи с тэгом "{{tag.tag_name|title}}": </h1>
+    {% for note in tag.notes_set.all %}
+    
+          {% include 'News/includes/note_cart_temp.html' %}
+
+    {% endfor %}
+
+    
+{% endblock content %}

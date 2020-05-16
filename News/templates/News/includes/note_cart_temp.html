@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-header">
+        {{ note.author }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ note.title }}</h5>
+        <p class="card-text">{{ note.text|truncatewords:15 }}</p>
+        <footer class="blockquote-footer mb-2">Тэги: {% for tag in note.fk_tag.all %}
+            <a href="{{ tag.get_absolute_url }}">#{{ tag.tag_name }}</a>
+            {% endfor %}
+        </footer>
+        <footer class="blockquote-footer mb-2">{{ note.pub_date }}</footer>
+        <a href="{{ note.get_absolute_url }}" class="btn btn-primary">Обсудить</a>
+    </div>
+</div>

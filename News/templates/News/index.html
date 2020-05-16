@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="mb-5">Статьи: </h1>
+
+{% if notes %}
+{% for note in notes.object_list %}
+        {% include 'News/includes/note_cart_temp.html' %}
+{% endfor %}
+{% else %}
+<p>Нет ни одной статьи</p>
+{% endif %}
+{% endblock content %}

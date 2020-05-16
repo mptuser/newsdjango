@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Ваши статьи: </h1>
+
+  
+  {% if notes_list  %}
+    <ul>
+        {% for note in notes_list %}
+        <li>
+            <a href="{% url 'url_detail' note.pk %}">{{note.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+  {% else %}
+      <p>У вас нет ни одной статьи.</p>
+  {% endif %}
+      
+{% endblock content %}
