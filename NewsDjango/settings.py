@@ -63,11 +63,11 @@ TEMPLATES = [
 
 SECRET_KEY = 'kaifu=-we1234gfs$$@$@$&#ja4n*%ko$zn'
 
-DEBUG = False
+DEBUG = True
 
 WSGI_APPLICATION = 'NewsDjango.wsgi.application'
 
-ALLOWED_HOSTS = ['127.0.0.1', '89.223.123.167']
+ALLOWED_HOSTS = ['127.0.0.1', '']
 
 DATABASES = {
     'default': {
@@ -114,13 +114,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static')
-# ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 LOGIN_REDIRECT_URL = '/'
 
 
